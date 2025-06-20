@@ -49,7 +49,7 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="hero-wave">
-        <svg viewBox="0 0 1440 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg preserveAspectRatio="none" viewBox="0 0 1440 300" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path ref={waveRef} d="M0,180 C240,80 480,300 720,120 C960,-20 1200,250 1440,100 L1440,300 L0,300 Z" fill="#F8D7DA" />
         </svg>
         {/* Frutas animadas, bem distribuídas */}
