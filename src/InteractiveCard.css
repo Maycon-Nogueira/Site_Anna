@@ -1,0 +1,78 @@
+.interactive-card {
+  background: #fff6f8;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(231,48,137,0.08);
+  padding: 1.1em 1.3em;
+  font-size: 1.05rem;
+  color: #0F4F3D;
+  min-width: 220px;
+  max-width: 340px;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+  transition: box-shadow 0.25s, transform 0.25s;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: none;
+  overflow: visible;
+}
+.interactive-card.visible {
+  animation: card-fade-in 0.8s cubic-bezier(.68,-0.55,.27,1.55) forwards;
+}
+@keyframes card-fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.interactive-card:hover, .interactive-card:focus {
+  box-shadow: 0 6px 24px rgba(231,48,137,0.13);
+  transform: scale(1.03);
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  margin-bottom: 0.5em;
+}
+.card-icon {
+  font-size: 1.5em;
+  line-height: 1;
+}
+.card-title {
+  font-weight: 600;
+  font-size: 1.1em;
+}
+.card-text {
+  max-height: 3.2em;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(.68,-0.55,.27,1.55), opacity 0.5s;
+  margin-bottom: 0.7em;
+  opacity: 0.85;
+}
+.interactive-card.expanded .card-text {
+  max-height: 100vh;
+  opacity: 1;
+}
+.card-toggle {
+  background: none;
+  border: none;
+  color: #E73089;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  transition: color 0.2s;
+}
+.card-toggle:hover {
+  color: #FB5012;
+}
+@media (min-width: 700px) {
+  .interactive-card {
+    min-width: 260px;
+    max-width: 380px;
+    font-size: 1.13rem;
+  }
+} 

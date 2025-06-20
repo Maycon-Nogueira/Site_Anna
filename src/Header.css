@@ -1,0 +1,107 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.15rem 1rem 0.1rem 2rem;
+  background: #F8D7DA;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: top 0.3s, opacity 0.3s;
+  gap: 1rem;
+  min-height: 65px;
+}
+.header.hide {
+  top: -100px;
+  opacity: 0;
+}
+.logo-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.logo-container .logo {
+  height: 45px;
+  max-width: 70px;
+  object-fit: contain;
+  padding: 1px 10px;
+}
+.logo.grande {
+  height: 70px;
+  max-width: 80px;
+  object-fit: contain;
+}
+.nav {
+  display: flex;
+  gap: 1.2rem;
+  flex: 1 1 0;
+}
+.nav-left {
+  justify-content: space-evenly;
+}
+.nav-right {
+  justify-content: flex-end;
+    gap: 10rem;
+}
+.nav a {
+  color: #0F4F3D;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+  margin-right: 2rem;
+}
+.nav a:hover {
+  color: #E73089;
+}
+.header .agendar-btn {
+  background: #FB5012;
+  color: #fff;
+  padding: 0.3rem 2.1rem;
+  border-radius: 180px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+  margin-top: 0.3em;
+  flex: 0 0 auto;
+}
+.header .agendar-btn:hover {
+  background: #E73089;
+}
+@media (max-width: 900px) {
+  .header {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    min-height: 30px;
+    padding: 0.1rem 0.8rem 0.1rem 1.5rem;
+  }
+  .logo-container {
+    position: static;
+    transform: none;
+    order: 2;
+  }
+  .nav {
+    gap: 0.6rem;
+  }
+  .nav-left {
+    order: 1;
+    justify-content: center;
+  }
+  .nav-right {
+    order: 3;
+    justify-content: center;
+  }
+  .header .agendar-btn {
+    padding: 0.3rem 1rem;
+    font-size: 0.85rem;
+    order: 4;
+  }
+  .logo-container .logo, .logo.grande {
+    height: 35px;
+    max-width: 50px;
+  }
+} 

@@ -1,0 +1,311 @@
+.hero-section {
+  background: #F8D7DA;
+  min-height: 85vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding: 0;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/foto_banner.jpg') center center/cover no-repeat;
+  z-index: 1;
+  opacity: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 20;
+  max-width: 100%;
+  margin: 0;
+  padding: 3rem 1rem 0 1rem;
+  text-align: left;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  font-family: "benton-modern-display", serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.01em;
+  text-shadow: 0 2px 16px #0F4F3D55;
+  line-height: 1.1;
+  width: 100%;
+}
+
+.hero-section h2 {
+  font-size: 1.2rem;
+  color: #D2E6C7;
+  font-family: "benton-modern-display", serif;
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 0.1em;
+  margin-bottom: 0.01em;
+  text-shadow: 0 2px 12px #0F4F3D55;
+  width: 100%;
+}
+
+.crn {
+  color: #fff;
+  font-size: 0.9rem;
+  margin-top: 0.1em;
+  margin-bottom: 1.2em;
+  text-shadow: 0 2px 8px #0F4F3D55;
+  font-family: "benton-modern-display", serif;
+  font-weight: 400;
+  font-style: normal;
+  width: 100%;
+}
+
+.cta-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.8rem;
+  margin: 2.5rem 0 0 0;
+  padding-bottom: 1.5rem;
+}
+
+.cta {
+  display: none;
+}
+
+.agendar-btn {
+  background: #FB5012;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 18px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+  z-index: 30;
+  margin-top: 0;
+}
+
+.agendar-btn:hover {
+  background: #E73089;
+}
+
+.hero-wave {
+  position: absolute;
+  left: 0;
+  bottom: -1.3em;
+  width: 100%;
+  z-index: 10;
+  pointer-events: none;
+  line-height: 0;
+  height: 120px;
+}
+
+.hero-wave svg {
+  width: 100vw;
+  height: 120px;
+  display: block;
+  margin-bottom: -5px;
+}
+
+@keyframes fruta-entrada {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(0.7) rotate(-20deg);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.05) rotate(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}
+
+.fruta {
+  position: absolute;
+  width: 38px;
+  z-index: 20;
+  opacity: 0;
+  animation: fruta-entrada 1s cubic-bezier(.68,-0.55,.27,1.55) forwards;
+  pointer-events: none;
+}
+.fruta1 { animation-delay: 0.2s; left: 5vw; bottom: 40px; }
+.fruta2 { animation-delay: 0.4s; left: 18vw; bottom: 30px; }
+.fruta3 { animation-delay: 0.6s; left: 32vw; bottom: 45px; }
+.fruta4 { animation-delay: 0.8s; right: 8vw; bottom: 40px; }
+.fruta5 { animation-delay: 1s; right: 2vw; bottom: 25px; }
+.fruta6 { animation-delay: 1.2s; left: 45vw; bottom: 50px; }
+.fruta7 { animation-delay: 1.4s; right: 20vw; bottom: 60px; }
+.fruta8 { animation-delay: 1.6s; left: 60vw; bottom: 20px; }
+
+/* Desktop e tablets */
+@media (min-width: 700px) {
+  .hero-section {
+    min-height: 70vh;
+  }
+  .hero-content {
+    padding: 5rem 0 0 3rem;
+    max-width: 100%;
+  }
+  .hero-section h1 {
+    font-size: 6rem;
+    width: 70%;
+  }
+  .hero-section h2 {
+    font-size: 2.2rem;
+    width: 60%;
+  }
+  .crn {
+    font-size: 1.2rem;
+    width: 50%;
+  }
+  .cta-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.2rem;
+    margin: 2.5rem 0 0 0;
+    padding-bottom: 2.5rem;
+  }
+  .cta {
+    font-size: 1.9rem;
+  }
+  .agendar-btn {
+    font-size: 1.1rem;
+    padding: 0.7rem 2.8rem;
+  }
+  .hero-wave {
+    height: 300px;
+  }
+  .hero-wave svg {
+    height: 300px;
+  }
+  .fruta {
+    width: 80px;
+  }
+  .fruta1 { left: 5vw; bottom: 80px; }
+  .fruta2 { left: 18vw; bottom: 60px; }
+  .fruta3 { left: 32vw; bottom: 75px; }
+  .fruta4 { right: 8vw; bottom: 70px; }
+  .fruta5 { right: 2vw; bottom: 50px; }
+  .fruta6 { left: 45vw; bottom: 90px; }
+  .fruta7 { right: 20vw; bottom: 110px; }
+  .fruta8 { left: 60vw; bottom: 40px; }
+}
+
+@media (max-width: 900px) {
+  .hero-content {
+    text-align: left;
+    padding: 3rem 0 1rem 2rem;
+  }
+
+  .hero-section h1 {
+    font-size: 4rem;
+    width: 90%;
+  }
+
+  .hero-section h2 {
+    font-size: 1.8rem;
+    width: 80%;
+  }
+
+  .crn {
+    font-size: 1rem;
+    width: 70%;
+  }
+
+  .fruta {
+    width: 50px;
+  }
+
+  .fruta1 {
+    left: 3vw;
+    bottom: 60px;
+  }
+
+  .fruta2 {
+    left: 15vw;
+    bottom: 45px;
+  }
+
+  .fruta3 {
+    left: 28vw;
+    bottom: 55px;
+  }
+
+  .fruta4 {
+    right: 6vw;
+    bottom: 50px;
+  }
+
+  .fruta5 {
+    right: 1vw;
+    bottom: 35px;
+  }
+}
+
+/* Tablet intermediário */
+@media (min-width: 600px) and (max-width: 999px) {
+  .hero-section {
+    min-height: 80vh;
+  }
+  .hero-content {
+    padding: 4rem 2rem 0 2rem;
+    max-width: 100%;
+  }
+  .hero-section h1 {
+    font-size: 3.5rem;
+    width: 90%;
+  }
+  .hero-section h2 {
+    font-size: 1.6rem;
+    width: 80%;
+  }
+  .crn {
+    font-size: 1.1rem;
+    width: 70%;
+  }
+  .cta-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.2rem;
+    margin: 2rem 0 0 0;
+    padding-bottom: 2rem;
+  }
+  .agendar-btn {
+    font-size: 1.05rem;
+    padding: 0.6rem 2rem;
+  }
+  .hero-wave {
+    height: 180px;
+  }
+  .hero-wave svg {
+    height: 180px;
+  }
+  .fruta {
+    width: 60px;
+  }
+  .fruta1 { left: 5vw; bottom: 60px; }
+  .fruta2 { left: 18vw; bottom: 50px; }
+  .fruta3 { left: 32vw; bottom: 65px; }
+  .fruta4 { right: 8vw; bottom: 60px; }
+  .fruta5 { right: 2vw; bottom: 40px; }
+  .fruta6 { left: 45vw; bottom: 70px; }
+  .fruta7 { right: 20vw; bottom: 80px; }
+  .fruta8 { left: 60vw; bottom: 30px; }
+}
+
+@media (min-width: 1000px) {
+  .hero-section {
+    min-height: 92vh;
+  }
+}

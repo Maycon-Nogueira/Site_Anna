@@ -1,0 +1,32 @@
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+.profile-image {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+  border: 4px solid #fff;
+  background: #fff6f8;
+}
+@media (min-width: 700px) {
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Animação de flutuação */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+.animate-float {
+  animation: float 3.5s ease-in-out infinite;
+} 
