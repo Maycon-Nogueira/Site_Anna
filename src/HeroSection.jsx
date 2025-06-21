@@ -42,8 +42,10 @@ const HeroSection = () => {
       <div className="hero-bg" />
       <div className="hero-content">
         <h1>ANNA CASTRO</h1>
-        <h2>nutricionista</h2>
-        <p className="crn">CRN/3: 901278/P</p>
+        <div className="subtitle-group">
+          <h2>nutricionista</h2>
+          <p className="crn">CRN/3: 901278/P</p>
+        </div>
         <div className="cta-group">
           <a href="#agendar" className="agendar-btn">Agendar consulta</a>
         </div>

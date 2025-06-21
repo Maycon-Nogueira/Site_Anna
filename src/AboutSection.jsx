@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './AboutSection.css';
 import ProfileCard from './components/ProfileCard';
 
 const AboutSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <section className="about-section">
       <div className="dynamic-background"></div>
@@ -32,11 +37,46 @@ const AboutSection = () => {
             
             <div className="cta-container">
               <button className="cta-button">Agendar Consulta</button>
-              <button className="secondary-button">Ver Credenciais</button>
+              <button className="secondary-button" onClick={openModal}>Ver Credenciais</button>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Modal de Credenciais */}
+      {isModalOpen && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={closeModal}>×</button>
+            <div className="modal-header">
+              <h2>Credenciais Profissionais</h2>
+              <div className="modal-divider"></div>
+            </div>
+            <div className="modal-body">
+              <div className="credential-item">
+                <h3>Formação Acadêmica</h3>
+                <p>Bacharelado em Nutrição - Universidade Presbiteriana Mackenzie</p>
+              </div>
+              <div className="credential-item">
+                <h3>Registro Profissional</h3>
+                <p>CRN-3: 12345 - Conselho Regional de Nutricionistas</p>
+              </div>
+              <div className="credential-item">
+                <h3>Especializações</h3>
+                <ul>
+                  <li>Nutrição Clínica e Comportamental</li>
+                  <li>Nutrição Esportiva</li>
+                  <li>Nutrição Funcional</li>
+                </ul>
+              </div>
+              <div className="credential-item">
+                <h3>Experiência</h3>
+                <p>5+ anos de experiência em consultório particular e atendimento personalizado</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
