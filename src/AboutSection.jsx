@@ -9,7 +9,7 @@ const AboutSection = () => {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <section className="about-section">
+    <section id="sobre-mim" className="about-section">
       <div className="dynamic-background"></div>
       
       <div className="about-container">
@@ -36,7 +36,7 @@ const AboutSection = () => {
             </div>
             
             <div className="cta-container">
-              <button className="cta-button">Agendar Consulta</button>
+              <a href="https://wa.me/5511979977839" target="_blank" rel="noopener noreferrer" className="cta-button">Agendar Consulta</a>
               <button className="secondary-button" onClick={openModal}>Ver Credenciais</button>
             </div>
           </div>

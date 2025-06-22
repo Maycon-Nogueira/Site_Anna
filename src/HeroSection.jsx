@@ -38,16 +38,18 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="hero-section">
+    <section id="hero" className="hero-section">
       <div className="hero-bg" />
       <div className="hero-content">
         <h1>ANNA CASTRO</h1>
         <div className="subtitle-group">
           <h2>nutricionista</h2>
-          <p className="crn">CRN/3: 901278/P</p>
+          <span className="crn">CRN/3: 901278/P</span>
         </div>
         <div className="cta-group">
-          <a href="#agendar" className="agendar-btn">Agendar consulta</a>
+          <a href="https://wa.me/5511979977839" target="_blank" rel="noopener noreferrer" className="agendar-btn">
+            Agendar consulta
+          </a>
         </div>
       </div>
       <div className="hero-wave">

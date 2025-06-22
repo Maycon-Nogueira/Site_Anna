@@ -1,0 +1,363 @@
+/* --- Seção Jornada --- */
+.jornada-section {
+  padding: 100px 20px;
+  background: linear-gradient(180deg, #F9F5F6 0%, #f0f5ed 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.jornada-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    url('/kiwi.png'), 
+    url('/morango.png'), 
+    url('/morango.png'), 
+    url('/kiwi.png'), 
+    url('/kiwi_cortado.png'), 
+    url('/morango.png'),
+    url('/kiwi.png'),
+    url('/morango.png'),
+    url('/kiwi_cortado.png'),
+    url('/morango.png');
+  background-position: 
+    10% 10%,   /* top-left */
+    90% 15%,   /* top-right */
+    5% 50%,    /* center-left */
+    95% 55%,   /* center-right */
+    25% 30%,   /* top-center-left */
+    75% 35%,   /* top-center-right */
+    15% 85%,   /* bottom-left */
+    85% 90%,   /* bottom-right */
+    50% 75%,   /* bottom-center */
+    50% 5%;    /* top-center */
+  background-repeat: no-repeat;
+  background-size: 60px, 80px, 70px, 90px, 55px, 100px, 45px, 65px, 75px, 50px;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.jornada-section::after {
+  content: '🍃';
+  position: absolute;
+  bottom: 20%;
+  right: 8%;
+  font-size: 6rem;
+  color: #F8D7DA;
+  opacity: 0.4;
+  transform: rotate(20deg);
+}
+
+.jornada-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Header */
+.jornada-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.jornada-header h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #0f4f3d;
+  margin-bottom: 16px;
+}
+
+.jornada-subtitle {
+  font-size: 1.25rem;
+  color: #0f4f3d;
+  max-width: 600px;
+  margin: 0 auto 24px;
+}
+
+.jornada-proof {
+  display: inline-block;
+  background-color: #e730891a;
+  color: #e73089;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.jornada-proof .highlight {
+  font-weight: 700;
+}
+
+/* --- Caminho da Jornada (Layouts) --- */
+.journey-path {
+  position: relative;
+}
+
+/* Step Card Base */
+.journey-step {
+  background: #ffffff;
+  border: 1px solid #d2e6c7;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.journey-step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-color: #e73089;
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.step-icon-container {
+  background: linear-gradient(135deg, #f0f5ed, #e6f0e2);
+  color: #0f4f3d;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  position: relative;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 3px #d2e6c7;
+}
+
+.step-number {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #e73089;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+
+.step-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0f4f3d;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.step-arrow {
+  font-size: 1.5rem;
+  color: #d2e6c7;
+  transition: transform 0.4s ease;
+}
+
+.journey-step.active .step-arrow {
+  transform: rotate(180deg);
+  color: #e73089;
+}
+
+.step-content {
+  overflow: hidden;
+}
+
+.step-description {
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+}
+
+.step-benefit {
+  background-color: #fdf5f8;
+  border-left: 3px solid #e73089;
+  padding: 12px;
+  border-radius: 8px;
+  color: #5c2c4f;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.step-benefit svg {
+  color: #e73089;
+  flex-shrink: 0;
+}
+
+/* Peça Central (Borboleta) */
+.journey-centerpiece {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.centerpiece-icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto;
+  line-height: 1;
+  animation: float 3s ease-in-out infinite;
+}
+
+.centerpiece-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.journey-centerpiece h4 {
+  font-size: 1.5rem;
+  color: #0f4f3d;
+  margin-top: 8px;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+
+/* --- Layout Mobile (Accordion) < 768px --- */
+@media (max-width: 767px) {
+  .jornada-header h2 {
+    font-size: 2rem;
+  }
+  .journey-path {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* --- Layout Tablet (Grid 2x3) 768px - 1023px --- */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .journey-path {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+/* --- Layout Desktop (Horizontal) > 1024px --- */
+@media (min-width: 1024px) {
+  .journey-path {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px 30px;
+    align-items: start;
+  }
+  
+  .journey-step {
+    cursor: default;
+  }
+
+  .step-header {
+    cursor: auto;
+  }
+
+  .step-arrow {
+    display: none;
+  }
+
+  .journey-step .step-content {
+    height: auto !important;
+    opacity: 1 !important;
+    margin-top: 16px !important;
+  }
+}
+
+/* --- CTA Section --- */
+.jornada-cta {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  margin-top: 80px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border: 1px solid #d2e6c7;
+}
+
+.jornada-cta h3 {
+  font-size: 2rem;
+  color: #0f4f3d;
+  margin-bottom: 8px;
+}
+
+.jornada-cta p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.cta-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  position: relative;
+}
+
+.select-group svg {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+.select-group select {
+  padding: 14px 16px 14px 45px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  -webkit-appearance: none;
+  appearance: none;
+  min-width: 250px;
+  cursor: pointer;
+}
+
+.cta-button {
+  background: #fb5012;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px #fb50124d;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px #fb501266;
+}
+
+.form-footer {
+  margin-top: 20px;
+  color: #888;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+} 

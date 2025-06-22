@@ -77,7 +77,7 @@ const beneficios = [
 
 export default function Beneficios() {
   return (
-    <section className="beneficios-clean-section">
+    <section id="beneficios" className="beneficios-clean-section">
       <div className="beneficios-bg-clean" aria-hidden="true" />
       <div className="beneficios-clean-header">
         <h2>Benefícios do acompanhamento nutricional</h2>
@@ -99,7 +99,7 @@ export default function Beneficios() {
         ))}
       </div>
       <div className="beneficios-clean-cta-wrap">
-        <a href="#agendar" className="beneficios-clean-cta">
+        <a href="https://wa.me/5511979977839" target="_blank" rel="noopener noreferrer" className="beneficios-clean-cta">
           Iniciar Minha Transformação
           <span className="cta-arrow">→</span>
         </a>

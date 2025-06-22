@@ -2,7 +2,7 @@ import Header from './Header'
 import HeroSection from './HeroSection'
 import AboutSection from './AboutSection'
 import Beneficios from './Beneficios'
-import Valores from './Valores'
+import Jornada from './Jornada'
 import Avaliacoes from './Avaliacoes'
 import Footer from './Footer'
 import './App.css'
@@ -14,12 +14,12 @@ function App() {
       <HeroSection />
       <AboutSection />
       <Beneficios />
-      <Valores />
+      <Jornada />
       <Avaliacoes />
       <Footer />
       {/* Botão flutuante do WhatsApp */}
       <a
-        href="https://wa.me/SEUNUMEROAQUI"
+        href="https://wa.me/5511979977839"
         className="whatsapp-float"
         target="_blank"
         rel="noopener noreferrer"
